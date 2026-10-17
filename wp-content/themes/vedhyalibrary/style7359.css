@@ -1,0 +1,38 @@
+/*
+Theme Name: Vedhya Library
+Theme URI: https://vedhyalibrary.com
+Author: Vedhya Library
+Author URI: https://vedhyalibrary.com
+Description: A calm, premium WordPress theme for a modern study library — custom home, about, membership wizard, gallery, rules, contact, payment (Razorpay) and success pages with a shared header & footer.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vedhyalibrary
+Tags: education, custom-menu, custom-colors, translation-ready, full-width-template
+*/
+
+/*
+  The real design system lives in /assets/site.css (loaded on every page),
+  with page-specific styles in /assets/home.css and /assets/about.css.
+  This file only carries the theme header (required by WordPress) plus a
+  couple of small WordPress-admin niceties below.
+*/
+
+/* Push fixed header clear of the WP admin bar */
+body.admin-bar header#header { top: 32px; }
+@media screen and (max-width: 782px){
+  body.admin-bar header#header { top: 46px; }
+}
+
+/* Custom logo (uploaded via Appearance → Customize → Site Identity) */
+.brand .custom-logo{width:46px;height:46px;border-radius:13px;object-fit:cover;display:block;box-shadow:var(--shadow-sm)}
+.foot-brand .brand .custom-logo{width:44px;height:44px}
+
+/* WordPress core alignment helpers (in case the block editor is used) */
+.alignleft{float:left;margin-right:1.5em}
+.alignright{float:right;margin-left:1.5em}
+.aligncenter{display:block;margin-left:auto;margin-right:auto}
+.screen-reader-text{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
